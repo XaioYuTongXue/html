@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="add">
+		{{ message}}
+		<h2>{{ school.name }} {{ school.age}}</h2>
+		<p>{{ arr[0] }}</p>
+	</div>
+	<p class="ps">
+		{{center }}
+	</p>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		let add = new Vue({
+			el:"#add",
+			data:{
+				message:"你好，小余同学,欢迎学习Vue",
+				school:{
+						name:'小余同学',
+						age:'18'
+					},
+			arr:['北京','上海','武汉']
+			},
+		})
+
+		let ps = new Vue({
+			el:".ps",
+			data:{
+				center:'愿你学有所成'
+				
+			}
+		})
+	</script>
+</body>
+</html>
